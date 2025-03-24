@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# React Chatbot with Dark/Light Theme and Gemini API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a single-page application chatbot built with React. It features dark/light theme integration and utilizes the Gemini API for chatbot responses.
 
-## Available Scripts
+## Installation Guide
 
-In the project directory, you can run:
+Follow these steps to set up and run the project:
 
-### `npm start`
+### Prerequisites
+Ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- npm (comes with Node.js) or yarn
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Step 1: Clone the Repository
+```sh
+git clone https://github.com/your-username/react-chatbot.git
+cd react-chatbot
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Step 2: Install Dependencies
+```sh
+npm install
+# or
+yarn install
+```
 
-### `npm test`
+### Step 3: Set Up the API Key
+You need to configure the Gemini API key inside a `.env` file.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Create a `.env` file in the root directory.
+2. Add the following line, replacing `your-api-key` with your actual Gemini API key:
+   ```sh
+   REACT_APP_GEMINI_API_KEY=your-api-key
+   ```
+3. Restart the React app after setting up the environment variable.
 
-### `npm run build`
+### Step 4: Configure the API Key in `HOME.jsx`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Inside `src/pages/HOME.jsx`, import the API key and initialize the Gemini API client:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```javascript
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+const API_KEY = process.env.REACT_APP_GEMINI_API_KEY;
+const genAI = new GoogleGenerativeAI(API_KEY);
+const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+```
 
-### `npm run eject`
+Ensure `process.env.REACT_APP_GEMINI_API_KEY` is correctly referenced and accessible.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Step 5: Run the React Application
+To start the development server, run:
+```sh
+npm start
+# or
+yarn start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This will open the chatbot application in your default web browser at `http://localhost:3000`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Features
+- **Single-Page Application**: Built with React for a seamless user experience.
+- **Dark/Light Theme Toggle**: Saves user preference in local storage.
+- **Chatbot Integration**: Utilizes Google Gemini API to generate responses.
+- **Responsive Design**: Works well on mobile and desktop devices.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Troubleshooting
+- If you see `undefined API key` error, ensure your `.env` file is properly set and restart the application.
+- Clear browser cache if theme toggle does not persist.
 
-## Learn More
+## Deployment
+To build the application for production, run:
+```sh
+npm run build
+# or
+yarn build
+```
+This will generate optimized static files in the `build/` folder.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+You can then deploy it to any static hosting provider like Vercel, Netlify, or GitHub Pages.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
+### Happy Coding! 🚀
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
