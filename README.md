@@ -81,9 +81,13 @@ You can then deploy it to any static hosting provider like Vercel, Netlify, or G
 
 
 OUTPUT:HOME PAGE
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/568197b1-01ed-44fb-ae35-ed8d41c81d12)
+
+![image](https://github.com/user-attachments/assets/de73034d-6bd0-48a9-85c6-4b6bf0e7b2a3)
 LEFT PANEL
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/838c7f19-8bf6-44ce-be9e-e766e114c527)
+
+
 ---
 ### Happy Coding! 🚀
 
