@@ -79,6 +79,11 @@ This will generate optimized static files in the `build/` folder.
 
 You can then deploy it to any static hosting provider like Vercel, Netlify, or GitHub Pages.
 
+
+OUTPUT:HOME PAGE
+![alt text](image.png)
+LEFT PANEL
+![alt text](image-1.png)
 ---
 ### Happy Coding! 🚀
 
