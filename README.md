@@ -80,7 +80,7 @@ This will generate optimized static files in the `build/` folder.
 You can then deploy it to any static hosting provider like Vercel, Netlify, or GitHub Pages.
 
 
-OUTPUT:HOME ![image](https://bashify.io/i/cgkwrL)
+OUTPUT:HOME ![image](https://bashify.io/img/3d94805432ea8a65e7c2916ca67c1046)
 
 ![image](https://github.com/user-attachments/assets/de73034d-6bd0-48a9-85c6-4b6bf0e7b2a3)
 LEFT PANEL
