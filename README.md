@@ -81,7 +81,12 @@ You can then deploy it to any static hosting provider like Vercel, Netlify, or G
 
 
 OUTPUT:
-[![IMG-9499.png](https://i.postimg.cc/PrgB7sp2/IMG-9499.png)](https://postimg.cc/QHq4BzqT)
+<div align=center>
+
+<img src="https://i.postimg.cc/PrgB7sp2/IMG-9499.png)](https://postimg.cc/QHq4BzqT" width=500 height=900>
+   
+</div>
+
 ![image](https://github.com/user-attachments/assets/de73034d-6bd0-48a9-85c6-4b6bf0e7b2a3)
 LEFT PANEL
 ![image](https://github.com/user-attachments/assets/838c7f19-8bf6-44ce-be9e-e766e114c527)
